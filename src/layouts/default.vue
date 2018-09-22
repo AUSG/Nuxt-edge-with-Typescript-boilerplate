@@ -1,8 +1,23 @@
 <template>
   <div>
+    <TopBar/>
     <nuxt/>
   </div>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator'
+import TopBar from '~/components/Topbar.vue'
+
+@Component({
+  components: {
+    TopBar,
+  }
+})
+export default class DefaultLayout extends Vue {
+
+}
+</script>
 
 <style>
 html {
@@ -14,6 +29,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background-color: #1e1e1e;
 }
 
 *, *:before, *:after {
