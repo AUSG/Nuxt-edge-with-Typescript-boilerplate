@@ -2,24 +2,11 @@
   <div class="main">
     <div class="intro">
       <img src="img/awskurg.png"
-        srcset="img/awskurg@2x.png 2x, img/awskurg@3x.png 3x"
         class="AWSKURG"/>
-      <div class="slogun">
-        <span>
-          우리는 나누고 <br/>
-          전파합니다
-        </span>
+      <div class="slogun" v-html="slogun">
       </div>
       <div class="grid">
-        <pre class="AWSKRUG-2012-">
-          <b>AWSKRUG</b>는 2012년 시작된 아마존 웹서비스 한국 사용자모임으로서, 
-          <b>AWS클라우드</b>를 처음 배우는 분들로 부터 고급 개발자까지 정보 교류를
-          위해 만들었습니다. 
-
-          각종 반기 및 월간 세미나, 지역별 분야별 소모임 
-          그리고 글로벌 유저그룹 연계 활동 등 다양한 프로젝트를 수행하고
-          있으며, 자세한 내용은 아래 소개 자료를 참고하시기 바랍니다.
-        </pre>
+        <div class="description" v-html="description"></div>
         <a class="facebook">
           <img src="img/facebook.svg"
             class="facebook">
@@ -50,12 +37,26 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "nuxt-property-decorator";
+import { Vue, Component, Prop } from 'nuxt-property-decorator'
 
 @Component({
   components: {}
 })
-export default class IndexPage extends Vue {}
+export default class IndexPage extends Vue {
+  slogun = `
+  우리는 나누고 <br/>
+  전파합니다
+  `
+  description = `
+  <b>AWSKRUG</b>는 2012년 시작된 아마존 웹서비스 한국 사용자모임으로서, <br/>
+  <b>AWS클라우드</b>를 처음 배우는 분들로 부터 고급 개발자까지 정보 교류를
+  위해 만들었습니다. <br/><br/>
+
+  각종 반기 및 월간 세미나, 지역별 분야별 소모임 <br/>
+  그리고 글로벌 유저그룹 연계 활동 등 다양한 프로젝트를 수행하고<br/>
+  있으며, 자세한 내용은 아래 소개 자료를 참고하시기 바랍니다.
+  `
+}
 </script>
 
 <style>
@@ -64,9 +65,8 @@ export default class IndexPage extends Vue {}
 }
 
 .intro {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  float: right;
+  padding-top: 17em;
 }
 
 .AWSKURG {
@@ -75,6 +75,9 @@ export default class IndexPage extends Vue {}
   object-fit: contain;
   opacity: 0.46;
   flex: 1;
+  position: absolute;
+  margin-top: -17em;
+  margin-left: -20em;
 }
 
 .slogun {
@@ -88,10 +91,16 @@ export default class IndexPage extends Vue {}
   line-height: normal;
   letter-spacing: normal;
   color: #ffffff;
-  flex: 1;
+  text-align: left;
 }
 
-.AWSKRUG-2012- {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  border-top: solid 0.2em white;
+}
+
+.description {
   width: 740px;
   height: 315px;
   font-family: SpoqaHanSans;
@@ -101,16 +110,21 @@ export default class IndexPage extends Vue {}
   font-stretch: normal;
   line-height: 1.8;
   letter-spacing: normal;
+
+  margin: 1em 0em;
   color: #ffffff;
-  border-top: solid 0.1em white;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
-.AWSKRUG-2012- .text-style-1 {
+.description .text-style-1 {
   font-family: Arial;
   font-weight: bold;
 }
 
-.AWSKRUG-2012- .text-style-2 {
+.description .text-style-2 {
   font-weight: bold;
 }
 
@@ -118,18 +132,52 @@ export default class IndexPage extends Vue {}
   width: 188px;
   height: 188px;
   object-fit: contain;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .big_square {
   width: 263px;
   height: 263px;
   object-fit: contain;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 
 .facebook .slack .github .slideshare {
   width: 188px;
   height: 188px;
   object-fit: contain;
+}
+
+.facebook {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.slack {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.github {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.slideshare {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 
 </style>

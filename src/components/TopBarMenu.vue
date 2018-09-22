@@ -19,6 +19,10 @@ export default class TopBarMenuComponent extends Vue {
 </script>
 
 <style scoped>
+hr {
+  border: solid 0.1em white;
+}
+
 .menu {
   margin-right: 2em;
 }
