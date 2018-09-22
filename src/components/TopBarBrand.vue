@@ -1,9 +1,9 @@
 <template>
-  <div class="box">
+  <a class="box" href="/">
     <span class="AWS">
       AWS한국사용자모임
     </span>
-  </div>
+  </a>
 </template>
 
 <script lang="ts">

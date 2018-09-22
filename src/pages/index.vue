@@ -32,8 +32,6 @@
           <img src="img/slack.svg"
             class="slack">
         </a>
-        <img src="img/slack.svg"
-          class="slack">
         <a class="github">
           <img src="img/github.svg"
             class="github">

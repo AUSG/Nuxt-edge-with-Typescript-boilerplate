@@ -24,7 +24,7 @@ export default class TopBarComponent extends Vue {
     {
       title: 'AWS',
       subtitle: 'Amazon Web Service',
-      href: 'https://naver.com',
+      href: '',
     }, {
       title: 'AWSKRUG',
       subtitle: 'AWS KoRea User Group',
@@ -52,6 +52,7 @@ export default class TopBarComponent extends Vue {
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
+  padding-right: 5em;
 }
 
 .topbar-menu {
