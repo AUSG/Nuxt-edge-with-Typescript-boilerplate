@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import TopBar from '~/components/Topbar.vue'
+import TopBar from '~/components/Topbar/index.vue'
 
 @Component({
   components: {

@@ -1,5 +1,5 @@
 <template>
-  <a class="menu" :href="link">
+  <a class="menu">
     <div class="title">{{ title }}</div>
     <hr/>
     <div class="subtitle">{{ subtitle }}</div>
@@ -20,7 +20,7 @@ export default class TopBarMenuComponent extends Vue {
 
 <style scoped>
 hr {
-  border: solid 0.1em white;
+  border: solid 3px white;
 }
 
 .menu {

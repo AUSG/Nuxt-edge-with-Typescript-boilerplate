@@ -10,8 +10,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import TopBarBrand from '~/components/TopBarBrand.vue'
-import TopBarMenu from '~/components/TopBarMenu.vue'
+import TopBarBrand from './TopBarBrand.vue'
+import TopBarMenu from './TopBarMenu.vue'
 
 @Component({
   components: {

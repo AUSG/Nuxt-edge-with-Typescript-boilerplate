@@ -20,7 +20,7 @@ export default class TopBarBrandComponent extends Vue {
   width: 300px;
   /* height: 0.1px; */
   /* border: solid 4px #ffffff; */
-  border-top: solid 0.2em white;
+  border-top: solid 4px white;
 }
 
 .AWS {
